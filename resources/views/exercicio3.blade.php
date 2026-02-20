@@ -2,8 +2,8 @@
 
 
 @section('conteudo')
-    <h1>Exercício 2 - Subtração</h1>
-    <form method="post" action="/resposta2">
+    <h1>Exercício 3 - Multiplicação</h1>
+    <form method="post" action="/resposta3">
         @CSRF
         <div class="mb-3">
             <label for="valor1" class="form-label">Informe o primeiro valor</label>
@@ -15,9 +15,10 @@
         </div>
         <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
-    @isset($sub)
-        <p class="text-success">O valor da subtração é: {{ $sub }} </p>
+    @isset($mult)
+        <p class="text-success">O valor da multiplicação é: {{ $mult }} </p>
     @endisset
+
 
 
 @endsection

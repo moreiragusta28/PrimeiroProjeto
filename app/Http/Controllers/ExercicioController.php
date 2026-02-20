@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use illuminate\Http\Request;
+use Illuminate\Http\Request;
 
 class ExercicioController extends Controller {
 
@@ -28,6 +28,30 @@ class ExercicioController extends Controller {
         return view('exercicio2', ['sub' => $sub]);
     }
 
+
+    public function exibirFormulario3(){
+        return view('exercicio3');
+    }
+
+    public function calcularMult(Request $request){
+        $valor1 = $request->input('valor1');
+        $valor2 = $request->input('valor2');
+        $mult = $valor1 * $valor2;
+        return view('exercicio3', ['mult' => $mult]);
+    }
+
+    public function exibirFormulario4(){
+        return view('exercicio4');
+    }
+
+    public function calcularDivisao(Request $request){
+        $valor1 = $request->input('valor1');
+        $valor2 = $request->input('valor2');
+        if($valor2 == 0)
+        $divisao = $valor1 / $valor2;
+        return view('exercicio4', ['divisao' => $divisao]);
+
+    }
 
 
 }
